@@ -84,6 +84,10 @@ class ReactHowler extends Component {
       this.volume(this.props.volume)
     }
 
+    if (prevProps.rate !== this.props.rate) {
+      this.rate(this.props.rate)
+    }
+
     if (this.props.preload && this.howlerState() === 'unloaded') {
       this.load()
     }
